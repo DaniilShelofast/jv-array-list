@@ -45,7 +45,7 @@ public class ArrayList<T> implements List<T> {
     public void addAll(List<T> list) {
 
         if (elements.length < size + list.size()) {
-            T[] newArrays = (T[]) new Object[size + list.size() + (list.size() / 2)];
+            T[] newArrays = (T[]) new Object[size + list.size() + (elements.length / 2)];
             System.arraycopy(elements, 0, newArrays, 0, size);
             elements = newArrays;
         }
